@@ -1,0 +1,61 @@
+html{min-height: 100%;}
+body{min-height: 100%;}
+body.page1{
+    background-color: #42322b;
+}
+body.page2{
+    background-color: black;
+}
+body.page3{background-image: linear-gradient(#85e2f2,#08475c);
+    background-repeat: no-repeat;
+    min-height: 100%;
+    height:fit-content;
+    margin: 0;}
+body.page4{background-image: linear-gradient(#063545,#030f14);
+    background-repeat: no-repeat;
+    min-height: 100%;
+    height:fit-content;
+    margin: 0;}
+    :root{
+        --overlay-color-1: #063545;
+        --overlay-color-2: #020a0d;
+        --anim-duration: 30s;
+    }
+    
+    #gradient {
+        opacity: 0.8;
+        background: none;
+    }
+    
+    #gradient:after,
+    #gradient:before {
+        content: '';
+        display: block;
+        position: absolute;
+        top: 0; bottom: 0; left: 0; right: 0;
+    }
+    
+    #gradient:before {
+        background: linear-gradient(180deg, var(--overlay-color-2) 0%, var(--overlay-color-1) 100%);
+        animation: OpacityAnim var(--anim-duration) ease-in-out 0s infinite alternate;
+    }
+    
+    #gradient:after {
+        background: linear-gradient(180deg, var(--overlay-color-1) 0%, var(--overlay-color-2) 100%);
+        animation: OpacityAnim var(--anim-duration) ease-in-out calc(-1 * var(--anim-duration)) infinite alternate;
+    }
+    
+    @keyframes OpacityAnim {
+        0%{opacity: 1.0}
+        100%{opacity: 0.0}
+    }
+body.page5{background-image: url(dreambg.jpg);
+    background-repeat: no-repeat;
+    min-height: 80%;
+    height:auto;
+    margin: 0;
+    margin-bottom: -50px;}
+    
+body.page6{
+   background-color: #f4bdfc;
+}
